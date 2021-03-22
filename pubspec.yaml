@@ -1,0 +1,21 @@
+name: smart_alert_dialog
+description: A Smart Alert Dialog that uses Cupertino for IOS and Material for Android
+repository: https://github.com/lcsvcn/SmartAlertDialog.git
+homepage: https://github.com/lcsvcn/SmartAlertDialog.git
+version: 1.0.0
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  responsive_builder: ^0.4.0-nullsafety.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

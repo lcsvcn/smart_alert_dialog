@@ -1,7 +1,7 @@
 part of smart_alert_dialog_widget;
 
 class _SmartAlertDialogTablet extends StatelessWidget {
-  final SmartAlertDialogWidget _smartAlertDialog;
+  final SmartAlertDialog _smartAlertDialog;
 
   const _SmartAlertDialogTablet(this._smartAlertDialog);
 

@@ -1,7 +1,7 @@
 part of smart_alert_dialog_widget;
 
 class _SmartAlertDialogMobile extends StatelessWidget {
-  final SmartAlertDialogWidget _smartAlertDialog;
+  final SmartAlertDialog _smartAlertDialog;
   final bool dismissableAlert;
 
   const _SmartAlertDialogMobile(this._smartAlertDialog, this.dismissableAlert);
