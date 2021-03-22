@@ -68,6 +68,7 @@ default: `No`
 - [ ] Add `confirmTextColor`
 - [ ] Add `dismissText`
 - [ ] Add `dismissTextColor`
+- [ ] Create design for Tablets and Web
 
 Please open an issue if something doesn't work or is not clear enough.
 
