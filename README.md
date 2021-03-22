@@ -1,5 +1,8 @@
 # Smart Alert Dialog 
 
+[![Pub Version](https://img.shields.io/pub/v/smart_alert_dialog)](https://pub.dev/packages/smart_alert_dialog)
+
+
 A Smart Alert Dialog that uses Cupertino for IOS and Material for Android
 
 # Android:
