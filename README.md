@@ -1,102 +1,75 @@
-# Speed Dial - Float Action Button
-Migrated from Gitlab: https://gitlab.com/lcsvcn/speed-dial-float-action-button
+# Smart Alert Dialog 
 
-A Speed Dial FAB widget for Flutter
+A Smart Alert Dialog that uses Cupertino for IOS and Material for Android
 
-![](/https://i.imgur.com/NUYF5KQ.gif)
-<img src="https://i.imgur.com/NUYF5KQ.gif"  width="375" height="667">
+# Android:
+
+Dismissable Alert Dialog:
+
+![](/https://i.imgur.com/6P0K1l5.png)
+<img src="https://i.imgur.com/6P0K1l5.png"  width="375" height="667">
+
+Accept/Cancel Alert Dialog:
+
+![](/https://i.imgur.com/ApKecci.png)
+<img src="https://i.imgur.com/ApKecci.png"  width="375" height="667">
 
 **Please note**: Most of the support on debugging new issues relies on the open source community.
 
-## Getting started
-
-### Requirements
-### To install and start using speed_dial_fab:
-
-1. `Add speed_dial_fab to your pubspec.yaml`
-## Usage
-
-To use speed_dial_fab, `import` the `speed_dial_fab` module and use the `speed_dial_fab` Widget. More usage examples can be seen under the `examples/` folder.
-
-![](/https://i.imgur.com/n6qPgzD.png)
-<img src="https://i.imgur.com/n6qPgzD.png"  width="300" height="250">
-
-Please open an issue if something doesn't work or is not clear enough.
-
 ## Props
 
-#### `primaryBackgroundColor`
+#### `title`
 
-Change the background color of the primary FAB button.
+Change the title of the Alert Dialog
 
-propType: `Color`
-default: `Colors.white`
-
-#### `primaryForegroundColor`
-
-Change the foregroundColor of the primary FAB button.
-
-propType: `Color`
-default: `Colors.black`
-
-#### `secondaryBackgroundColor`
-
-Change the background color of the secondary FAB buttons.
-
-propType: `Color`
-default: `Colors.white`
-
-#### `secondaryForegroundColor`
-
-Change the foreground color of the secondary FAB buttons.
-
-
-propType: `Color`
-default: `Colors.black`
-
-#### `secondaryIconsList`
-
-Change the icons of the secondary FAB buttons.
-
-propType: `List[IconData]`
+propType: `String`
 
 REQUIRED!
 
-#### `secondaryIconsOnPress`
+#### `content`
 
-An array of function that will be called when secondary button is clicked
+Change the description of the Alert Dialog
 
-propType: `List[Function]`
+propType: `String`
 
 REQUIRED!
 
-#### `secondaryIconsText`
+#### `onConfirmPress`
 
-Change the text of the icon for the secondary FAB buttons, the little ones that expand and colapse from the main FAB.
+Function to be call on accept press. If not set, it will appear a dismissable alert dialog.
 
-propType: `List[String]`
-default: 'null' (No tooltip)
+propType: `Function()`
+default: `null`
 
-#### `principalIconExpand`
+#### `onCancelPress`
 
-Change the icon for the principal FAB when the secondary FABs aren't visible. Expand secondary FABS.
+Function to be call on cancel press.
 
-propType: `IconData`
-default: 'Icons.expand_less'
+propType: `Function()`
+default: `Dismiss Dialog Alert`
 
-#### `principalIconCollapse`
 
-Change the icon for the principal FAB when the secondary FABs are visible. Close/Collapse secondary FABS.
+#### `confirmText`
 
-propType: `IconData`
-default: 'Icons.expand_less'
+Change the text from confirm button
 
-#### `rotateAngle`
+propType: `String`
+default: `Yes`
 
-Change the animation icon for the principal FAB, when is clicked.
 
-propType: `double`
-default: 'math.pi (180°)
+#### `cancelText`
+Change the text from cancel button
+
+propType: `String`
+default: `No`
+
+## ToDo
+- [ ] Add `cancelTextColor`
+- [ ] Add `confirmTextColor`
+- [ ] Add `dismissText`
+- [ ] Add `dismissTextColor`
+
+Please open an issue if something doesn't work or is not clear enough.
 
 ## License
 
