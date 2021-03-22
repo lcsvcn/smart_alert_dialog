@@ -30,17 +30,62 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void _yesNoSmartAlert(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (_) => SmartAlertDialog(
+        title: "Are you liking it?",
+        content:
+            "Do you think my library is awesome and want have a try?\n\nNote: Fell free to open PR to improve it :)",
+        onConfirmPress: () => print("do something on confirm"),
+        onCancelPress: () => print("do something on cancel"),
+      ),
+    );
+  }
+
+  void _okSmartAlert(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (_) => SmartAlertDialog(
+        title: "This is an dismissable alert!",
+        content:
+            "Hey, you can only dismiss this alert dialog. And also, don't tap again in that button. You have been alerted!",
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[700],
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(
-          child: Text(
-            "Smart Alert Dialog Example",
-            style: TextStyle(
-              color: Colors.white,
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              MaterialButton(
+                child: Text(
+                  "Send a Dismissable Alert",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+                onPressed: () => _okSmartAlert(context),
+                color: Colors.blue,
+              ),
+              MaterialButton(
+                child: Text(
+                  "Send a Accept/Cancel Alert",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+                onPressed: () => _yesNoSmartAlert(context),
+                color: Colors.green,
+              ),
+            ],
           ),
         ),
       ),
