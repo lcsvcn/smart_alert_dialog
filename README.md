@@ -14,6 +14,18 @@ Accept/Cancel Alert Dialog:
 ![](/https://i.imgur.com/ApKecci.png)
 <img src="https://i.imgur.com/ApKecci.png"  width="375" height="667">
 
+# iOS:
+
+Dismissable Alert Dialog:
+
+![](/https://i.imgur.com/5WnBPrf.png)
+<img src="https://i.imgur.com/5WnBPrf.png"  width="375" height="667">
+
+Accept/Cancel Alert Dialog:
+
+![](/https://i.imgur.com/0DiszVY.png)
+<img src="https://i.imgur.com/0DiszVY.png"  width="375" height="667">
+
 **Please note**: Most of the support on debugging new issues relies on the open source community.
 
 ## Props
