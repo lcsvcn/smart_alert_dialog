@@ -2,8 +2,9 @@ part of smart_alert_dialog_widget;
 
 class _SmartAlertDialogTablet extends StatelessWidget {
   final SmartAlertDialog _smartAlertDialog;
+  final bool dismissableAlert;
 
-  const _SmartAlertDialogTablet(this._smartAlertDialog);
+  const _SmartAlertDialogTablet(this._smartAlertDialog, this.dismissableAlert);
 
   Widget showCupertinoWidget(BuildContext context) {
     return CupertinoAlertDialog(
@@ -12,46 +13,57 @@ class _SmartAlertDialogTablet extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 30,
+          fontSize: 20,
         ),
       ),
-      content: Text(
-        _smartAlertDialog.content,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 24,
+      content: SingleChildScrollView(
+        child: Text(
+          _smartAlertDialog.content,
+          textAlign: TextAlign.center,
         ),
       ),
-      actions: [
-        CupertinoDialogAction(
-          child: Text(
-            "Não",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.red[600],
-              fontSize: 26,
-            ),
-          ),
-          onPressed: () => dismissDialog(context),
-        ),
-        CupertinoDialogAction(
-            child: Text(
-              "Sim",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.teal[400],
-                fontSize: 26,
+      actions: dismissableAlert
+          ? [
+              CupertinoDialogAction(
+                child: Text(
+                  _smartAlertDialog.getConfirmText(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red[600],
+                    fontSize: 18,
+                  ),
+                ),
+                onPressed: _smartAlertDialog.getOnConfirmPress(context),
               ),
-            ),
-            onPressed: _smartAlertDialog.onConfirmPress),
-      ],
+            ]
+          : [
+              CupertinoDialogAction(
+                child: Text(
+                  _smartAlertDialog.getCancelText(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red[600],
+                    fontSize: 18,
+                  ),
+                ),
+                onPressed: _smartAlertDialog.getOnCancelPress(context),
+              ),
+              CupertinoDialogAction(
+                child: Text(
+                  _smartAlertDialog.getConfirmText(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.teal[400],
+                    fontSize: 18,
+                  ),
+                ),
+                onPressed: _smartAlertDialog.getOnConfirmPress(context),
+              ),
+            ],
     );
-  }
-
-  void dismissDialog(BuildContext context) {
-    Navigator.of(context, rootNavigator: true).pop('dialog');
   }
 
   Widget showMaterialWidget(BuildContext context) {
@@ -61,42 +73,59 @@ class _SmartAlertDialogTablet extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 30,
+          fontSize: 20,
         ),
       ),
-      content: Text(
-        _smartAlertDialog.content,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 24,
+      content: SingleChildScrollView(
+        child: Text(
+          _smartAlertDialog.content,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 14,
+          ),
         ),
       ),
-      actions: [
-        TextButton(
-          child: Text(
-            "Não",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.red[600],
-              fontSize: 26,
-            ),
-          ),
-          onPressed: () => dismissDialog(context),
-        ),
-        TextButton(
-          child: Text(
-            "Sim",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.teal[400],
-              fontSize: 26,
-            ),
-          ),
-          onPressed: _smartAlertDialog.onConfirmPress,
-        ),
-      ],
+      actions: dismissableAlert
+          ? [
+              TextButton(
+                child: Text(
+                  "Ok",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueAccent[700],
+                    fontSize: 18,
+                  ),
+                ),
+                onPressed: _smartAlertDialog.getOnConfirmPress(context),
+              ),
+            ]
+          : [
+              TextButton(
+                child: Text(
+                  _smartAlertDialog.getCancelText(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red[600],
+                    fontSize: 18,
+                  ),
+                ),
+                onPressed: _smartAlertDialog.getOnCancelPress(context),
+              ),
+              TextButton(
+                child: Text(
+                  _smartAlertDialog.getConfirmText(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.teal[400],
+                    fontSize: 18,
+                  ),
+                ),
+                onPressed: _smartAlertDialog.getOnConfirmPress(context),
+              ),
+            ],
     );
   }
 
