@@ -1,5 +1,5 @@
 name: smart_alert_dialog
-description: A Smart Alert Dialog that uses Cupertino for IOS and Material for Android
+description: A Smart Alert Dialog that uses Cupertino for IOS and Material for Android. Fell Free to colaborate, every PR is welcome!
 repository: https://github.com/lcsvcn/SmartAlertDialog.git
 homepage: https://github.com/lcsvcn/SmartAlertDialog.git
 version: 1.0.0
