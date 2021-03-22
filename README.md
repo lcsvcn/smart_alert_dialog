@@ -7,24 +7,24 @@ A Smart Alert Dialog that uses Cupertino for IOS and Material for Android
 Dismissable Alert Dialog:
 
 ![](/https://i.imgur.com/6P0K1l5.png)
-<img src="https://i.imgur.com/6P0K1l5.png"  width="375" height="667">
+<img src="https://i.imgur.com/6P0K1l5.png"  width="300" height="515">
 
 Accept/Cancel Alert Dialog:
 
 ![](/https://i.imgur.com/ApKecci.png)
-<img src="https://i.imgur.com/ApKecci.png"  width="375" height="667">
+<img src="https://i.imgur.com/ApKecci.png"  width="300" height="515">
 
 # iOS:
 
 Dismissable Alert Dialog:
 
 ![](/https://i.imgur.com/5WnBPrf.png)
-<img src="https://i.imgur.com/5WnBPrf.png"  width="375" height="667">
+<img src="https://i.imgur.com/5WnBPrf.png"  width="300" height="648">
 
 Accept/Cancel Alert Dialog:
 
 ![](/https://i.imgur.com/0DiszVY.png)
-<img src="https://i.imgur.com/0DiszVY.png"  width="375" height="667">
+<img src="https://i.imgur.com/0DiszVY.png"  width="300" height="648">
 
 **Please note**: Most of the support on debugging new issues relies on the open source community.
 
