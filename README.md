@@ -64,14 +64,14 @@ propType: `Function()`
 default: `Dismiss Dialog Alert`
 
 
-#### `confirmText`
+#### `text`
 
 Change the text from confirm button
 
-propType: `String`
-default: `Yes`
+propType: `AlertDialogText`
+default: `AlertDialogText({confirm = Yes, cancel =  "No", dismiss = "Ok"})`
 
-
+REQUIRED!
 #### `cancelText`
 Change the text from cancel button
 
@@ -81,7 +81,7 @@ default: `No`
 ## ToDo
 - [ ] Add `cancelTextColor`
 - [ ] Add `confirmTextColor`
-- [ ] Add `dismissText`
+- [X] Add `dismissText` - it is inside DismissAlertText
 - [ ] Add `dismissTextColor`
 - [ ] Create design for Tablets and Web
 

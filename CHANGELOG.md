@@ -1,3 +1,11 @@
+## 2.0.0
+* Changed confirmText to DialogAlertText
+* Changed cancelText to DialogAlertText
+* Added Required for text to have a DialogAlertText
+
+## 1.1.0
+* Added comments
+
 ## 1.0.0
 
 * Initial Release
