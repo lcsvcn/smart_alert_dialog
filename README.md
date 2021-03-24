@@ -81,7 +81,7 @@ default: `No`
 ## ToDo
 - [ ] Add `cancelTextColor`
 - [ ] Add `confirmTextColor`
-- [X] Add `dismissText` - it is inside DismissAlertText
+- [X] Add `dismissText` - it is inside AlertDialogText
 - [ ] Add `dismissTextColor`
 - [ ] Create design for Tablets and Web
 
