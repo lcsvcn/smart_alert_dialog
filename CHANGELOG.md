@@ -1,4 +1,4 @@
-## 2.0.0
+## 2.0.0-nullsafety.0
 * Changed confirmText to DialogAlertText
 * Changed cancelText to DialogAlertText
 * Added Required for text to have a DialogAlertText
