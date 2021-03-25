@@ -23,6 +23,8 @@ class SmartAlertDialog extends StatelessWidget {
   final Function()? onCancelPress;
   // [confirmText] Change the text from confirm button
   final AlertDialogText text;
+  // [confirmText] Change the text from cancel button
+  final String confirmText;
   // [cancelText] Change the text from cancel button
   final String cancelText;
   // [isDismissible] Set this true to have a dismissable alert, the default is Yes/No alert dialog.
@@ -34,7 +36,8 @@ class SmartAlertDialog extends StatelessWidget {
     required this.text,
     this.onConfirmPress,
     this.onCancelPress,
-    this.cancelText = "No",
+    @deprecated this.cancelText = "Yes",
+    @deprecated this.confirmText = "No",
     this.isDismissible = false,
   });
 
