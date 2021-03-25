@@ -5,6 +5,7 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
 import 'local_constants/screen_breakpoints_sizes.dart';
 import 'models/AlertDialogText.dart';
+import 'models/AlertDialogStyle.dart';
 
 import 'dart:io' show Platform;
 
@@ -13,27 +14,45 @@ part 'smart_alert_dialog_tablet.dart';
 part 'smart_alert_dialog_desktop.dart';
 
 class SmartAlertDialog extends StatelessWidget {
-  // [title] This is the alert dialog title
+  /// [title] This is the alert dialog title
   final String title;
-  // [content] This is the alert dialog content
+
+  /// [content] This is the alert dialog content
   final String content;
-  // [onConfirmPress] Function to be call on confirm button press.
+
+  /// [onConfirmPress] Function to be call on confirm button press.
   final Function()? onConfirmPress;
-  // [onCancelPress] Function to be call on cancel button press.
+
+  /// [onCancelPress] Function to be call on cancel button press.
   final Function()? onCancelPress;
-  // [confirmText] Change the text from confirm button
+
+  /// [text] Change the text from confirm button
   final AlertDialogText text;
-  // [confirmText] Change the text from cancel button
+
+  /// [style] Change the text from confirm button
+  final AlertDialogStyle style;
+
+  /// [confirmText] Change the text from cancel button
   final String confirmText;
-  // [cancelText] Change the text from cancel button
+
+  /// [cancelText] Change the text from cancel button
   final String cancelText;
-  // [isDismissible] Set this true to have a dismissable alert, the default is Yes/No alert dialog.
+
+  /// [isDismissible] Set this true to have a dismissable alert, the default is Yes/No alert dialog.
   final bool isDismissible;
 
+  static const DEFAULT_TEXT = AlertDialogText();
+  static const DEFAULT_STYLE= AlertDialogStyle();
+
+  /// [text] default value is [DEFAULT_TEXT]
+  /// [style] default value is  [DEFAULT_STYLE]
+  /// [cancelText] is deprecated and should be replaced with [text] in newer versions
+  /// [confirmText] is deprecated and should be replaced with [text] in newer versions
   SmartAlertDialog({
     required this.title,
     required this.content,
-    required this.text,
+    this.text = DEFAULT_TEXT,
+    this.style = DEFAULT_STYLE,
     this.onConfirmPress,
     this.onCancelPress,
     @deprecated this.cancelText = "Yes",
@@ -54,7 +73,7 @@ class SmartAlertDialog extends StatelessWidget {
           dismissDialog(context);
         };
 
-  // [getOnConfirmPress] Get On Confirm Press or Default action
+  /// [getOnConfirmPress] Get On Confirm Press or Default action
   Function() getOnConfirmPress(BuildContext context) => onConfirmPress == null
       ? () => dismissDialog(context)
       : () {

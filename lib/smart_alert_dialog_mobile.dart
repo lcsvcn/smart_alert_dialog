@@ -6,23 +6,17 @@ class _SmartAlertDialogMobile extends StatelessWidget {
 
   const _SmartAlertDialogMobile(this._smartAlertDialog, this.isDismissable);
 
-
   // [cupertinoYesOrNo] Show dismissable alert for IOS
   List<Widget> cupertinoDismissable(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
             _smartAlertDialog.text.dismiss,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.red[600],
-              fontSize: 18,
-            ),
+            style: _smartAlertDialog.style.dismiss,
           ),
           onPressed: () => _smartAlertDialog.dismissDialog(context),
         )
       ];
-
 
   // [cupertinoYesOrNo] Show yes or no alert for IOS
   List<Widget> cupertinoYesOrNo(BuildContext context) => [
@@ -30,11 +24,7 @@ class _SmartAlertDialogMobile extends StatelessWidget {
           child: Text(
             _smartAlertDialog.text.cancel,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.red[600],
-              fontSize: 18,
-            ),
+            style: _smartAlertDialog.style.cancel,
           ),
           onPressed: _smartAlertDialog.getOnCancelPress(context),
         ),
@@ -42,11 +32,7 @@ class _SmartAlertDialogMobile extends StatelessWidget {
           child: Text(
             _smartAlertDialog.text.confirm,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.teal[400],
-              fontSize: 18,
-            ),
+            style: _smartAlertDialog.style.confirm,
           ),
           onPressed: _smartAlertDialog.getOnConfirmPress(context),
         ),
@@ -58,15 +44,13 @@ class _SmartAlertDialogMobile extends StatelessWidget {
       title: Text(
         _smartAlertDialog.title,
         textAlign: TextAlign.center,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20,
-        ),
+        style: _smartAlertDialog.style.title,
       ),
       content: SingleChildScrollView(
         child: Text(
           _smartAlertDialog.content,
           textAlign: TextAlign.center,
+          style: _smartAlertDialog.style.content,
         ),
       ),
       actions: isDismissable
@@ -77,48 +61,35 @@ class _SmartAlertDialogMobile extends StatelessWidget {
 
   // [materialDismissable] Show dismissable alert for Android
   List<Widget> materialDismissable(BuildContext context) => [
-              TextButton(
-                child: Text(
-                  _smartAlertDialog.text.dismiss,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent[700],
-                    fontSize: 18,
-                  ),
-                ),
-                onPressed: _smartAlertDialog.getOnConfirmPress(context),
-              ),
-            ];
-
+        TextButton(
+          child: Text(
+            _smartAlertDialog.text.dismiss,
+            textAlign: TextAlign.center,
+            style: _smartAlertDialog.style.dismiss,
+          ),
+          onPressed: _smartAlertDialog.getOnConfirmPress(context),
+        ),
+      ];
 
   // [materialYesOrNo] Show yes or no alert for Android
   List<Widget> materialYesOrNo(BuildContext context) => [
-              TextButton(
-                child: Text(
-                  _smartAlertDialog.text.cancel,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red[600],
-                    fontSize: 18,
-                  ),
-                ),
-                onPressed: _smartAlertDialog.getOnCancelPress(context),
-              ),
-              TextButton(
-                child: Text(
-                  _smartAlertDialog.text.confirm,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.teal[400],
-                    fontSize: 18,
-                  ),
-                ),
-                onPressed: _smartAlertDialog.getOnConfirmPress(context),
-              ),
-            ];
+        TextButton(
+          child: Text(
+            _smartAlertDialog.text.cancel,
+            textAlign: TextAlign.center,
+            style: _smartAlertDialog.style.cancel,
+          ),
+          onPressed: _smartAlertDialog.getOnCancelPress(context),
+        ),
+        TextButton(
+          child: Text(
+            _smartAlertDialog.text.confirm,
+            textAlign: TextAlign.center,
+            style: _smartAlertDialog.style.confirm,
+          ),
+          onPressed: _smartAlertDialog.getOnConfirmPress(context),
+        ),
+      ];
 
   // [showMaterialWidget] Show alert design for Android
   Widget showMaterialWidget(BuildContext context) {
