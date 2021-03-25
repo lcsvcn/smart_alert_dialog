@@ -96,10 +96,10 @@ default: `No`
 **DEPRECATED!** Use `text` instead
 
 ## ToDo
-- [X] Add `cancelTextColor` - it is inside AlertDialogStyle, check style prop
-- [X] Add `confirmTextColor` - it is inside AlertDialogStyle, check style prop
-- [X] Add `dismissText` - it is inside AlertDialogText, check text prop
-- [X] Add `dismissTextColor` - it is inside AlertDialogStyle, check style prop
+- [X] Add `cancelTextColor` - it is inside AlertDialogStyle, check **style** prop
+- [X] Add `confirmTextColor` - it is inside AlertDialogStyle, check **style** prop
+- [X] Add `dismissText` - it is inside AlertDialogText, check **text** prop
+- [X] Add `dismissTextColor` - it is inside AlertDialogStyle, check **style** prop
 - [ ] Create design for Tablets and Web
 
 Please open an issue if something doesn't work or is not clear enough.
