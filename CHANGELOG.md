@@ -9,7 +9,6 @@
 * Deprecated [cancelText]. Use [text] instead!
 * Added required field [text] to have a DialogAlertText, for editing [confirm], [cancel], [dismiss] buttons
 
-
 ## 1.1.0
 * Added dartdoc and fixed readme.
 
