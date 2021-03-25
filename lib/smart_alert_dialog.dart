@@ -41,13 +41,16 @@ class SmartAlertDialog extends StatelessWidget {
   /// [isDismissible] Set this true to have a dismissable alert, the default is Yes/No alert dialog.
   final bool isDismissible;
 
+  /// [DEFAULT_TEXT] is the default value for [text]
   static const DEFAULT_TEXT = AlertDialogText();
-  static const DEFAULT_STYLE= AlertDialogStyle();
+
+  /// [DEFAULT_STYLE] is the default value for [style]
+  static const DEFAULT_STYLE = AlertDialogStyle();
 
   /// [text] default value is [DEFAULT_TEXT]
   /// [style] default value is  [DEFAULT_STYLE]
-  /// [cancelText] is deprecated and should be replaced with [text] in newer versions
-  /// [confirmText] is deprecated and should be replaced with [text] in newer versions
+  /// [cancelText] is [deprecated] and should be replaced with [text] in newer versions
+  /// [confirmText] is [deprecated] and should be replaced with [text] in newer versions
   SmartAlertDialog({
     required this.title,
     required this.content,
@@ -60,12 +63,12 @@ class SmartAlertDialog extends StatelessWidget {
     this.isDismissible = false,
   });
 
-  // [dismissDialog] Dismiss Alert Dialog
+  /// [dismissDialog] Dismiss Alert Dialog
   void dismissDialog(BuildContext context) {
     Navigator.of(context, rootNavigator: true).pop('dialog');
   }
 
-  // [getOnCancelPress] Get On Cancel Press or Default action
+  /// [getOnCancelPress] Get On Cancel Press or Default action
   Function() getOnCancelPress(BuildContext context) => onCancelPress == null
       ? () => dismissDialog(context)
       : () {

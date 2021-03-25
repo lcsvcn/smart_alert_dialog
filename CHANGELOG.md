@@ -1,4 +1,4 @@
-## 2.1.0-nullsafety.1
+## 2.1.0-nullsafety.0
 * Formatted dartdoc to be in the right format
 * Added [style] to the Dialog Alert Widget
 * Added [text] is not required anymore

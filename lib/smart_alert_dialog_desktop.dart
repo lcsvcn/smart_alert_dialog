@@ -6,7 +6,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
 
   const _SmartAlertDialogDesktop(this._smartAlertDialog, this.isDismissable);
 
-  // [cupertinoYesOrNo] Show dismissable alert for IOS
+  /// [cupertinoYesOrNo] Show dismissable alert for IOS
   List<Widget> cupertinoDismissable(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
@@ -22,7 +22,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
         )
       ];
 
-  // [cupertinoYesOrNo] Show yes or no alert for IOS
+  /// [cupertinoYesOrNo] Show yes or no alert for IOS
   List<Widget> cupertinoYesOrNo(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
@@ -50,7 +50,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
         ),
       ];
 
-  // [showCupertinoWidget] Show alert design for IOS
+  /// [showCupertinoWidget] Show alert design for IOS
   Widget showCupertinoWidget(BuildContext context) {
     return CupertinoAlertDialog(
       title: Text(
@@ -73,7 +73,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
     );
   }
 
-  // [materialDismissable] Show dismissable alert for Android
+  /// [materialDismissable] Show dismissable alert for Android
   List<Widget> materialDismissable(BuildContext context) => [
         TextButton(
           child: Text(
@@ -89,7 +89,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
         ),
       ];
 
-  // [materialYesOrNo] Show yes or no alert for Android
+  /// [materialYesOrNo] Show yes or no alert for Android
   List<Widget> materialYesOrNo(BuildContext context) => [
         TextButton(
           child: Text(
@@ -117,7 +117,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
         ),
       ];
 
-  // [showMaterialWidget] Show alert design for Android
+  /// [showMaterialWidget] Show alert design for Android
   Widget showMaterialWidget(BuildContext context) {
     return AlertDialog(
       title: Text(

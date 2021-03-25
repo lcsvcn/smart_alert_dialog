@@ -5,8 +5,8 @@ class _SmartAlertDialogTablet extends StatelessWidget {
   final bool isDismissable;
 
   const _SmartAlertDialogTablet(this._smartAlertDialog, this.isDismissable);
-  
-  // [cupertinoYesOrNo] Show dismissable alert for IOS
+
+  /// [cupertinoYesOrNo] Show dismissable alert for IOS
   List<Widget> cupertinoDismissable(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
@@ -22,7 +22,7 @@ class _SmartAlertDialogTablet extends StatelessWidget {
         )
       ];
 
-  // [cupertinoYesOrNo] Show yes or no alert for IOS
+  /// [cupertinoYesOrNo] Show yes or no alert for IOS
   List<Widget> cupertinoYesOrNo(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
@@ -50,7 +50,7 @@ class _SmartAlertDialogTablet extends StatelessWidget {
         ),
       ];
 
-  // [showCupertinoWidget] Show alert design for IOS
+  /// [showCupertinoWidget] Show alert design for IOS
   Widget showCupertinoWidget(BuildContext context) {
     return CupertinoAlertDialog(
       title: Text(
