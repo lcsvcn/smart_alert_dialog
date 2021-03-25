@@ -39,7 +39,7 @@ Change the title of the Alert Dialog
 
 propType: `String`
 
-REQUIRED!
+**REQUIRED!**
 
 #### `content`
 
@@ -47,7 +47,7 @@ Change the description of the Alert Dialog
 
 propType: `String`
 
-REQUIRED!
+**REQUIRED!**
 
 #### `onConfirmPress`
 
@@ -85,7 +85,7 @@ Change the text from cancel button
 propType: `String`
 default: `Yes`
 
-DEPRECATED! Use `text` instead
+**DEPRECATED!** Use `text` instead
 
 #### `cancelText`
 Change the text from cancel button
@@ -93,7 +93,7 @@ Change the text from cancel button
 propType: `String`
 default: `No`
 
-DEPRECATED! Use `text` instead
+**DEPRECATED!** Use `text` instead
 
 ## ToDo
 - [X] Add `cancelTextColor` - it is inside AlertDialogStyle, check style prop
