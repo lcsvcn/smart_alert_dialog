@@ -1,3 +1,6 @@
+## 2.2.0
+* Refactor code format
+
 ## 2.1.2-nullsafety.0
 * Removed const from [AlertDialogText] and [AlertDialogStyle]
 
