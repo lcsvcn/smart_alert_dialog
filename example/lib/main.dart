@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smart_alert_dialog/models/AlertDialogText.dart';
 import 'package:smart_alert_dialog/smart_alert_dialog.dart';
 
 void main() {

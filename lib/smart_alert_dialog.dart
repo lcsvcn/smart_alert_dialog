@@ -1,17 +1,13 @@
 library smart_alert_dialog_widget;
 
 import 'package:flutter/cupertino.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 import 'package:flutter/material.dart';
-import 'local_constants/screen_breakpoints_sizes.dart';
-import 'models/AlertDialogText.dart';
-import 'models/AlertDialogStyle.dart';
-
 import 'dart:io' show Platform;
 
-part 'smart_alert_dialog_mobile.dart';
-part 'smart_alert_dialog_tablet.dart';
-part 'smart_alert_dialog_desktop.dart';
+part 'models/alert_dialog_style.dart';
+part 'models/alert_dialog_text.dart';
+part 'system_design/material.dart';
+part 'system_design/cupertino.dart';
 
 class SmartAlertDialog extends StatelessWidget {
   /// [title] This is the alert dialog title
@@ -64,6 +60,7 @@ class SmartAlertDialog extends StatelessWidget {
   AlertDialogStyle getStyle() {
     return style ?? AlertDialogStyle();
   }
+
   /// [dismissDialog] Dismiss Alert Dialog
   void dismissDialog(BuildContext context) {
     Navigator.of(context, rootNavigator: true).pop('dialog');
@@ -87,15 +84,10 @@ class SmartAlertDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      breakpoints: ScreenBreakpoints(
-        tablet: ScreenBreakpointsSizes.TABLET,
-        desktop: ScreenBreakpointsSizes.DESKTOP,
-        watch: ScreenBreakpointsSizes.WATCH,
-      ),
-      mobile: _SmartAlertDialogMobile(this, isDismissible),
-      desktop: _SmartAlertDialogDesktop(this, isDismissible),
-      tablet: _SmartAlertDialogTablet(this, isDismissible),
+    return Center(
+      child: (Platform.isIOS)
+          ? Cupertino(this).showCupertinoWidget(context)
+          : Material(this).showMaterialWidget(context),
     );
   }
 }

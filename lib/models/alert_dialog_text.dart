@@ -1,3 +1,5 @@
+part of smart_alert_dialog_widget;
+
 class AlertDialogText {
   /// [confirm] Change the text from confirm button
   final String confirm;
