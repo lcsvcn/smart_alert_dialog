@@ -13,9 +13,9 @@ class _SmartAlertDialogMobile extends StatelessWidget {
   List<Widget> cupertinoDismissable(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
-            _smartAlertDialog.text.dismiss,
+            _smartAlertDialog.getText().dismiss,
             textAlign: TextAlign.center,
-            style: _smartAlertDialog.style.dismiss,
+            style: _smartAlertDialog.getStyle().dismiss,
           ),
           onPressed: () => _smartAlertDialog.dismissDialog(context),
         )
@@ -25,17 +25,17 @@ class _SmartAlertDialogMobile extends StatelessWidget {
   List<Widget> cupertinoYesOrNo(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
-            _smartAlertDialog.text.cancel,
+            _smartAlertDialog.getText().cancel,
             textAlign: TextAlign.center,
-            style: _smartAlertDialog.style.cancel,
+            style: _smartAlertDialog.getStyle().cancel,
           ),
           onPressed: _smartAlertDialog.getOnCancelPress(context),
         ),
         CupertinoDialogAction(
           child: Text(
-            _smartAlertDialog.text.confirm,
+            _smartAlertDialog.getText().confirm,
             textAlign: TextAlign.center,
-            style: _smartAlertDialog.style.confirm,
+            style: _smartAlertDialog.getStyle().confirm,
           ),
           onPressed: _smartAlertDialog.getOnConfirmPress(context),
         ),
@@ -47,13 +47,13 @@ class _SmartAlertDialogMobile extends StatelessWidget {
       title: Text(
         _smartAlertDialog.title,
         textAlign: TextAlign.center,
-        style: _smartAlertDialog.style.title,
+        style: _smartAlertDialog.getStyle().title,
       ),
       content: SingleChildScrollView(
         child: Text(
           _smartAlertDialog.content,
           textAlign: TextAlign.center,
-          style: _smartAlertDialog.style.content,
+          style: _smartAlertDialog.getStyle().content,
         ),
       ),
       actions: isDismissable
@@ -66,9 +66,9 @@ class _SmartAlertDialogMobile extends StatelessWidget {
   List<Widget> materialDismissable(BuildContext context) => [
         TextButton(
           child: Text(
-            _smartAlertDialog.text.dismiss,
+            _smartAlertDialog.getText().dismiss,
             textAlign: TextAlign.center,
-            style: _smartAlertDialog.style.dismiss,
+            style: _smartAlertDialog.getStyle().dismiss,
           ),
           onPressed: _smartAlertDialog.getOnConfirmPress(context),
         ),
@@ -78,17 +78,17 @@ class _SmartAlertDialogMobile extends StatelessWidget {
   List<Widget> materialYesOrNo(BuildContext context) => [
         TextButton(
           child: Text(
-            _smartAlertDialog.text.cancel,
+            _smartAlertDialog.getText().cancel,
             textAlign: TextAlign.center,
-            style: _smartAlertDialog.style.cancel,
+            style: _smartAlertDialog.getStyle().cancel,
           ),
           onPressed: _smartAlertDialog.getOnCancelPress(context),
         ),
         TextButton(
           child: Text(
-            _smartAlertDialog.text.confirm,
+            _smartAlertDialog.getText().confirm,
             textAlign: TextAlign.center,
-            style: _smartAlertDialog.style.confirm,
+            style: _smartAlertDialog.getStyle().confirm,
           ),
           onPressed: _smartAlertDialog.getOnConfirmPress(context),
         ),

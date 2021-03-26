@@ -1,3 +1,6 @@
+## 2.1.2-nullsafety.0
+* Removed const from [AlertDialogText] and [AlertDialogStyle]
+
 ## 2.1.1-nullsafety.0
 * Added more dartdoc
 

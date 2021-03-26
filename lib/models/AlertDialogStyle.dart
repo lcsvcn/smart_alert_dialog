@@ -48,7 +48,7 @@ class AlertDialogStyle {
   /// [dismiss] default value is [DEFAULT_DISMISS]
   /// [title] default value is [DEFAULT_TITLE]
   /// [content] default value is [DEFAULT_CONTENT]
-  const AlertDialogStyle({
+  AlertDialogStyle({
     this.confirm = DEFAULT_CONFIRM,
     this.cancel = DEFAULT_CANCEL,
     this.dismiss = DEFAULT_DISMISS,

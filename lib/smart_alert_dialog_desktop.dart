@@ -10,7 +10,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
   List<Widget> cupertinoDismissable(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
-            _smartAlertDialog.text.dismiss,
+            _smartAlertDialog.getText().dismiss,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -26,7 +26,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
   List<Widget> cupertinoYesOrNo(BuildContext context) => [
         CupertinoDialogAction(
           child: Text(
-            _smartAlertDialog.text.cancel,
+            _smartAlertDialog.getText().cancel,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -38,7 +38,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
         ),
         CupertinoDialogAction(
           child: Text(
-            _smartAlertDialog.text.confirm,
+            _smartAlertDialog.getText().confirm,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -77,7 +77,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
   List<Widget> materialDismissable(BuildContext context) => [
         TextButton(
           child: Text(
-            _smartAlertDialog.text.dismiss,
+            _smartAlertDialog.getText().dismiss,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -93,7 +93,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
   List<Widget> materialYesOrNo(BuildContext context) => [
         TextButton(
           child: Text(
-            _smartAlertDialog.text.cancel,
+            _smartAlertDialog.getText().cancel,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class _SmartAlertDialogDesktop extends StatelessWidget {
         ),
         TextButton(
           child: Text(
-            _smartAlertDialog.text.confirm,
+            _smartAlertDialog.getText().confirm,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.bold,

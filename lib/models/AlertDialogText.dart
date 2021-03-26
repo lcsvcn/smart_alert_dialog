@@ -11,7 +11,7 @@ class AlertDialogText {
   /// [confirm] default value is Yes
   /// [cancel] default value is No
   /// [dismiss] default value is Ok
-  const AlertDialogText({
+  AlertDialogText({
     this.confirm = "Yes",
     this.cancel = "No",
     this.dismiss = "Ok",
