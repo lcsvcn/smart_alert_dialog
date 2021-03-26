@@ -1,4 +1,4 @@
-part of smart_alert_dialog_widget;
+import 'package:flutter/material.dart';
 
 class AlertDialogStyle {
   /// [confirm] Change the text from confirm button

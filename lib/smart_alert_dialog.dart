@@ -4,8 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:io' show Platform;
 
-part 'models/alert_dialog_style.dart';
-part 'models/alert_dialog_text.dart';
+import 'models/alert_dialog_style.dart';
+import 'models/alert_dialog_text.dart';
+
 part 'system_design/material.dart';
 part 'system_design/cupertino.dart';
 

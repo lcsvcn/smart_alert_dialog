@@ -1,3 +1,6 @@
+## 2.2.1
+* [AlertDialogText] and [AlertDialogStyle] are not part of library but components
+
 ## 2.2.0
 * Refactor code format
 
