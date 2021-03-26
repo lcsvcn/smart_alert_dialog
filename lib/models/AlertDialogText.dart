@@ -1,8 +1,10 @@
 class AlertDialogText {
   /// [confirm] Change the text from confirm button
   final String confirm;
+
   /// [cancel] Change the text from cancel button
   final String cancel;
+
   /// [dismiss] Change the text from dismiss button
   final String dismiss;
 

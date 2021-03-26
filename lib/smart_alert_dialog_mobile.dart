@@ -1,7 +1,10 @@
 part of smart_alert_dialog_widget;
 
 class _SmartAlertDialogMobile extends StatelessWidget {
+  /// [_smartAlertDialog] Is an instance of smart dialog widget
   final SmartAlertDialog _smartAlertDialog;
+
+  /// [isDismissable] Set true to have an alert dialog
   final bool isDismissable;
 
   const _SmartAlertDialogMobile(this._smartAlertDialog, this.isDismissable);
