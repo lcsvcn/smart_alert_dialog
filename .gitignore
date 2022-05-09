@@ -12,6 +12,7 @@
 .svn/
 .save
 .dart_tool
+.DS_Store
 
 # IntelliJ related
 *.iml
