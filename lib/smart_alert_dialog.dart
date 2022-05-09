@@ -2,7 +2,7 @@ library smart_alert_dialog_widget;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:io' show Platform;
+import 'package:universal_io/io.dart' show Platform;
 
 import 'models/alert_dialog_style.dart';
 import 'models/alert_dialog_text.dart';
