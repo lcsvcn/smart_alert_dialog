@@ -1,3 +1,7 @@
+## 3.0.0
+* Supports web now
+* Removed deprecated parameters [confirmText] and [cancelText] (Use instead: AlertDialogText)
+
 ## 2.2.1
 * [AlertDialogText] and [AlertDialogStyle] are not part of library but components
 
