@@ -39,8 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
         text: AlertDialogText(),
         message:
             "Do you think my library is awesome and want have a try?\n\nNote: Fell free to open PR to improve it :)",
-        onConfirmPress: () => print("do something on confirm"),
-        onCancelPress: () => print("do something on cancel"),
+        onConfirmPressed: () => print("do something on confirm"),
+        onCancelPressed: () => print("do something on cancel"),
       ),
     );
   }

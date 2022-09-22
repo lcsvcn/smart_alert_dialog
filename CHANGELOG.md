@@ -1,3 +1,6 @@
+## 4.0.0
+* Removed all from version 3.0.0 deprecated parameters
+
 ## 3.1.1
 * Fix assertion error
 

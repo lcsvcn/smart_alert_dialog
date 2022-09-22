@@ -14,26 +14,11 @@ class SmartAlertDialog extends StatelessWidget {
   /// [title] This is the alert dialog title
   final String title;
 
-  @Deprecated("Use message attribute instead, content will be removed soon!")
-
-  /// [content] This is the alert dialog content
-  final String? content;
-
   /// [message] This is the alert dialog message. It is the same as the content did, but with better naming
   final String message;
 
-  @Deprecated("Use onConfirmPressed attribute instead, content will be removed soon!")
-
-  /// [onConfirmPress] Function to be call on confirm button press.
-  final Function()? onConfirmPress;
-
   /// [onConfirmPressed] Function to be call on confirm button press.
   final Function()? onConfirmPressed;
-
-  @Deprecated("Use onCancelPressed attribute instead, content will be removed soon!")
-
-  /// [onCancelPress] Function to be call on cancel button press.
-  final Function()? onCancelPress;
 
   /// [onCancelPressed] Function to be call on cancel button press.
   final Function()? onCancelPressed;
@@ -51,13 +36,10 @@ class SmartAlertDialog extends StatelessWidget {
   /// [style] default value is  [DEFAULT_STYLE]
   SmartAlertDialog({
     required this.title,
-    this.content,
-    this.message = "",
+    required this.message,
     this.text,
     this.style,
-    this.onConfirmPress,
     this.onConfirmPressed,
-    this.onCancelPress,
     this.onCancelPressed,
     this.isDismissible = false,
   })  : assert(
@@ -65,13 +47,11 @@ class SmartAlertDialog extends StatelessWidget {
           "You must provide a non empty title for the alert dialog",
         ),
         assert(
-          content != null && content.isNotEmpty || message.isNotEmpty,
-          "You must provide a message or content to the alert dialog (not both). Prefer using message, since content will be deprecated soon!",
+          message.isNotEmpty,
+          "You must provide a non empty message for the alert dialog",
         );
 
   AlertDialogText getText() => text ?? AlertDialogText();
-
-  String getMessage() => content ?? message;
 
   AlertDialogStyle getStyle() => style ?? AlertDialogStyle();
 
@@ -82,7 +62,7 @@ class SmartAlertDialog extends StatelessWidget {
 
   /// [getOnCancelPress] Get On Cancel Press or Default action
   Function() getOnCancelPress(BuildContext context) => () {
-        Function() cancel = onCancelPress ?? onCancelPressed ?? () => {};
+        Function() cancel = onCancelPressed ?? () => {};
 
         cancel();
 
@@ -91,7 +71,7 @@ class SmartAlertDialog extends StatelessWidget {
 
   /// [getOnConfirmPress] Get On Confirm Press or Default action
   Function() getOnConfirmPress(BuildContext context) => () {
-        Function() confirm = onConfirmPress ?? onConfirmPressed ?? () => {};
+        Function() confirm = onConfirmPressed ?? () => {};
 
         confirm();
         dismissDialog(context);

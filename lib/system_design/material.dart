@@ -48,14 +48,12 @@ class Material {
       ),
       content: SingleChildScrollView(
         child: Text(
-          _smartAlertDialog.getMessage(),
+          _smartAlertDialog.message,
           textAlign: TextAlign.center,
-          style: _smartAlertDialog.getStyle().getMessage(),
+          style: _smartAlertDialog.getStyle().message,
         ),
       ),
-      actions: _smartAlertDialog.isDismissible
-          ? materialDismissable(context)
-          : materialYesOrNo(context),
+      actions: _smartAlertDialog.isDismissible ? materialDismissable(context) : materialYesOrNo(context),
     );
   }
 }
