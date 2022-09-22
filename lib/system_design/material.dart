@@ -44,23 +44,16 @@ class Material {
       title: Text(
         _smartAlertDialog.title,
         textAlign: TextAlign.center,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20,
-        ),
+        style: _smartAlertDialog.getStyle().title,
       ),
       content: SingleChildScrollView(
         child: Text(
-          _smartAlertDialog.content,
+          _smartAlertDialog.getMessage(),
           textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 14,
-          ),
+          style: _smartAlertDialog.getStyle().getMessage(),
         ),
       ),
-      actions: _smartAlertDialog.isDismissible
-          ? materialDismissable(context)
-          : materialYesOrNo(context),
+      actions: _smartAlertDialog.isDismissible ? materialDismissable(context) : materialYesOrNo(context),
     );
   }
 }

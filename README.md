@@ -41,7 +41,7 @@ propType: `String`
 
 **REQUIRED!**
 
-#### `content`
+#### `message`  (Replacing the DEPRECATED `content`)
 
 Change the description of the Alert Dialog
 
@@ -49,14 +49,14 @@ propType: `String`
 
 **REQUIRED!**
 
-#### `onConfirmPress`
+#### `onConfirmPressed` (Replacing the DEPRECATED `onConfirmPress`)
 
 Function to be call on accept press. If not set, it will appear a dismissable alert dialog.
 
 propType: `Function()`
 default: `null`
 
-#### `onCancelPress`
+#### `onCancelPressed` (Replacing the DEPRECATED `onCancelPress`)
 
 Function to be call on cancel press.
 
@@ -79,21 +79,54 @@ Change the text from confirm button
 propType: `AlertDialogText`
 default: `AlertDialogStyle()`
 
-#### `confirmText`
-Change the text from cancel button
+
+# AlertDialogText
+
+#### `confirm`
+Change the text from confirm button
 
 propType: `String`
 default: `Yes`
 
-**DEPRECATED!** Use `text` instead
-
-#### `cancelText`
+#### `cancel`
 Change the text from cancel button
 
 propType: `String`
 default: `No`
 
-**DEPRECATED!** Use `text` instead
+#### `dismiss`
+Change the text from dismiss button
+
+propType: `String`
+default: `Ok`
+
+# AlertDialogStyle
+
+#### `confirm`
+Change the text style from confirm button
+
+propType: `TextStyle`
+
+#### `cancel`
+Change the text style from cancel button
+
+propType: `TextStyle`
+
+#### `dismiss`
+Change the text style from dismiss button
+
+propType: `TextStyle`
+
+
+#### `title`
+Change the text style from title text
+
+propType: `TextStyle`
+
+#### `message`
+Change the text style from title message
+
+propType: `TextStyle`
 
 ## ToDo
 - [X] Add `cancelTextColor` - it is inside AlertDialogStyle, check **style** prop

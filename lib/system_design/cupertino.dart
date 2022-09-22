@@ -48,14 +48,12 @@ class Cupertino {
       ),
       content: SingleChildScrollView(
         child: Text(
-          _smartAlertDialog.content,
+          _smartAlertDialog.getMessage(),
           textAlign: TextAlign.center,
-          style: _smartAlertDialog.getStyle().content,
+          style: _smartAlertDialog.getStyle().getMessage(),
         ),
       ),
-      actions: _smartAlertDialog.isDismissible
-          ? cupertinoDismissable(context)
-          : cupertinoYesOrNo(context),
+      actions: _smartAlertDialog.isDismissible ? cupertinoDismissable(context) : cupertinoYesOrNo(context),
     );
   }
 }

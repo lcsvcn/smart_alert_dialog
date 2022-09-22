@@ -1,3 +1,8 @@
+## 3.1.0
+* Deprecated parameters [content]. Use [message] instead. (Reason: better naming)
+* Deprecated parameters [onConfirmPress]. Use [onConfirmPressed] instead. (Reason: better naming)
+* Deprecated parameters [onCancelPress]. Use [onCancelPressed] instead. (Reason: better naming)
+
 ## 3.0.0
 * Supports web now
 * Removed deprecated parameters [confirmText] and [cancelText] (Use instead: AlertDialogText)

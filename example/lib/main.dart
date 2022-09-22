@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (_) => SmartAlertDialog(
         title: "Are you liking it?",
         text: AlertDialogText(),
-        content:
+        message:
             "Do you think my library is awesome and want have a try?\n\nNote: Fell free to open PR to improve it :)",
         onConfirmPress: () => print("do something on confirm"),
         onCancelPress: () => print("do something on cancel"),
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
       builder: (_) => SmartAlertDialog(
         title: "This is an dismissable alert!",
         text: AlertDialogText(),
-        content:
+        message:
             "Hey, you can only dismiss this alert dialog. And also, don't tap again in that button. You have been alerted!",
       ),
     );

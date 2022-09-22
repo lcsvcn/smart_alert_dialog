@@ -13,8 +13,15 @@ class AlertDialogStyle {
   /// [title] Change the text from title text
   final TextStyle title;
 
+  @Deprecated("Use message attribute instead, content will be removed soon!")
+
   /// [content] Change the text from content text
   final TextStyle? content;
+
+  /// [message] Change the text style for message text
+  final TextStyle? message;
+
+  TextStyle? getMessage() => content ?? message;
 
   /// [DEFAULT_DISMISS] is default value of [dismiss]
   static const TextStyle DEFAULT_DISMISS = TextStyle(
@@ -47,12 +54,12 @@ class AlertDialogStyle {
   /// [cancel] default value is  [DEFAULT_CANCEL]
   /// [dismiss] default value is [DEFAULT_DISMISS]
   /// [title] default value is [DEFAULT_TITLE]
-  /// [content] default value is [DEFAULT_CONTENT]
   AlertDialogStyle({
     this.confirm = DEFAULT_CONFIRM,
     this.cancel = DEFAULT_CANCEL,
     this.dismiss = DEFAULT_DISMISS,
     this.title = DEFAULT_TITLE,
     this.content,
+    this.message,
   });
 }
