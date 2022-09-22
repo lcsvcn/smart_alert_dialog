@@ -67,11 +67,7 @@ class SmartAlertDialog extends StatelessWidget {
         assert(
           content != null && content.isNotEmpty || message.isNotEmpty,
           "You must provide a message or content to the alert dialog (not both). Prefer using message, since content will be deprecated soon!",
-        ),
-        assert(onConfirmPress != null || onConfirmPressed != null,
-            "You must provide a onConfirmPress or onConfirmPressed to the alert dialog (not both). Prefer using onConfirmPressed, since onConfirmPress will be deprecated soon!"),
-        assert(onCancelPress != null || onCancelPressed != null,
-            "You must provide a onConfirmPress or onConfirmPressed to the alert dialog (not both). Prefer using onConfirmPressed, since onConfirmPress will be deprecated soon!");
+        );
 
   AlertDialogText getText() => text ?? AlertDialogText();
 
@@ -85,22 +81,21 @@ class SmartAlertDialog extends StatelessWidget {
   }
 
   /// [getOnCancelPress] Get On Cancel Press or Default action
-  Function() getOnCancelPress(BuildContext context) => onCancelPress == null
-      ? () => dismissDialog(context)
-      : () {
-          onCancelPress!();
-          onCancelPressed!();
-          dismissDialog(context);
-        };
+  Function() getOnCancelPress(BuildContext context) => () {
+        Function() cancel = onCancelPress ?? onCancelPressed ?? () => {};
+
+        cancel();
+
+        dismissDialog(context);
+      };
 
   /// [getOnConfirmPress] Get On Confirm Press or Default action
-  Function() getOnConfirmPress(BuildContext context) => onConfirmPress == null
-      ? () => dismissDialog(context)
-      : () {
-          onConfirmPress!();
-          onConfirmPressed!();
-          dismissDialog(context);
-        };
+  Function() getOnConfirmPress(BuildContext context) => () {
+        Function() confirm = onConfirmPress ?? onConfirmPressed ?? () => {};
+
+        confirm();
+        dismissDialog(context);
+      };
 
   @override
   Widget build(BuildContext context) {

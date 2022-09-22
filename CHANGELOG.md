@@ -1,3 +1,6 @@
+## 3.1.1
+* Fix assertion error
+
 ## 3.1.0
 * Deprecated parameters [content]. Use [message] instead. (Reason: better naming)
 * Deprecated parameters [onConfirmPress]. Use [onConfirmPressed] instead. (Reason: better naming)

@@ -53,7 +53,9 @@ class Cupertino {
           style: _smartAlertDialog.getStyle().getMessage(),
         ),
       ),
-      actions: _smartAlertDialog.isDismissible ? cupertinoDismissable(context) : cupertinoYesOrNo(context),
+      actions: _smartAlertDialog.isDismissible
+          ? cupertinoDismissable(context)
+          : cupertinoYesOrNo(context),
     );
   }
 }

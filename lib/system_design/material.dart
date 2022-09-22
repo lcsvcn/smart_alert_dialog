@@ -53,7 +53,9 @@ class Material {
           style: _smartAlertDialog.getStyle().getMessage(),
         ),
       ),
-      actions: _smartAlertDialog.isDismissible ? materialDismissable(context) : materialYesOrNo(context),
+      actions: _smartAlertDialog.isDismissible
+          ? materialDismissable(context)
+          : materialYesOrNo(context),
     );
   }
 }
