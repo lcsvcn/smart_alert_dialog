@@ -29,7 +29,11 @@ class Cupertino {
           onPressed: _smartAlertDialog.getOnCancelPress(context),
         ),
         CupertinoDialogAction(
-          cd,
+          child: Text(
+            _smartAlertDialog.getText().confirm,
+            textAlign: TextAlign.center,
+            style: _smartAlertDialog.getStyle().confirm,
+          ),
           onPressed: _smartAlertDialog.getOnConfirmPress(context),
         ),
       ];
@@ -49,7 +53,9 @@ class Cupertino {
           style: _smartAlertDialog.getStyle().message,
         ),
       ),
-      actions: _smartAlertDialog.isDismissible ? cupertinoDismissable(context) : cupertinoYesOrNo(context),
+      actions: _smartAlertDialog.isDismissible
+          ? cupertinoDismissable(context)
+          : cupertinoYesOrNo(context),
     );
   }
 }
