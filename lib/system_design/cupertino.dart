@@ -29,11 +29,7 @@ class Cupertino {
           onPressed: _smartAlertDialog.getOnCancelPress(context),
         ),
         CupertinoDialogAction(
-          child: Text(
-            _smartAlertDialog.getText().confirm,
-            textAlign: TextAlign.center,
-            style: _smartAlertDialog.getStyle().confirm,
-          ),
+          cd,
           onPressed: _smartAlertDialog.getOnConfirmPress(context),
         ),
       ];
