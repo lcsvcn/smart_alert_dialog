@@ -80,8 +80,9 @@ class SmartAlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child:
-          (Platform.isIOS) ? Cupertino(this).showCupertinoWidget(context) : Material(this).showMaterialWidget(context),
+      child: (Platform.isIOS)
+          ? Cupertino(this).showCupertinoWidget(context)
+          : Material(this).showMaterialWidget(context),
     );
   }
 }
